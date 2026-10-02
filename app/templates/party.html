@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+
+{% block title %}
+Party Planner
+{% endblock %}
+
+
+{% block content %}
+
+<section class="planner-wrapper">
+
+    <div class="planner-card">
+
+        <h1>
+            🎉 Party Planner
+        </h1>
+
+        <p>
+            Enter your event details and let
+            PocketSmart AI create a practical
+            party plan.
+        </p>
+
+
+        <form id="partyForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Event Type
+                    </label>
+
+                    <select
+                        class="form-control"
+                        name="event_type"
+                        required>
+
+                        <option value="">
+                            Select event
+                        </option>
+
+                        <option>
+                            Birthday
+                        </option>
+
+                        <option>
+                            Wedding
+                        </option>
+
+                        <option>
+                            Engagement
+                        </option>
+
+                        <option>
+                            Anniversary
+                        </option>
+
+                        <option>
+                            College Event
+                        </option>
+
+                        <option>
+                            Family Function
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Number of Guests
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="number"
+                        name="guests"
+                        min="1"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Budget (₹)
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="number"
+                        name="budget"
+                        min="1"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Venue
+                    </label>
+
+                    <select
+                        class="form-control"
+                        name="venue"
+                        required>
+
+                        <option value="">
+                            Select venue
+                        </option>
+
+                        <option>
+                            Home
+                        </option>
+
+                        <option>
+                            Hall
+                        </option>
+
+                        <option>
+                            Outdoor
+                        </option>
+
+                        <option>
+                            Restaurant
+                        </option>
+
+                        <option>
+                            Hotel
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Theme
+                </label>
+
+                <input
+                    class="form-control"
+                    type="text"
+                    name="theme"
+                    placeholder="Example: Floral, pastel, traditional"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Food Preference
+                </label>
+
+                <input
+                    class="form-control"
+                    type="text"
+                    name="food_preference"
+                    placeholder="Example: Vegetarian">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Additional Requirements
+                </label>
+
+                <textarea
+                    class="form-control"
+                    name="requirements"
+                    placeholder="Example: Need a small stage and photo area"></textarea>
+
+            </div>
+
+
+            <button
+                id="generateButton"
+                class="btn btn-primary"
+                type="submit">
+
+                Generate AI Plan
+
+            </button>
+
+        </form>
+
+
+        <div
+            id="result"
+            class="result-box hidden">
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard - PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="dashboard-header">
+
+            <h1>
+                Welcome,
+                <span id="dashboardUsername">
+                    User
+                </span> 👋
+            </h1>
+
+            <p class="page-subtitle">
+                Manage your PocketSmart AI planning
+                experience.
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-grid">
+
+            <div class="stat-card">
+
+                <p>
+                    Total Recommendations
+                </p>
+
+                <div
+                    id="recommendationCount"
+                    class="stat-number">
+                    0
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>
+                    Home Planner
+                </p>
+
+                <a
+                    href="/home"
+                    class="card-link">
+
+                    Create Plan →
+
+                </a>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>
+                    Party Planner
+                </p>
+
+                <a
+                    href="/party"
+                    class="card-link">
+
+                    Create Plan →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="card"
+            style="margin-top: 25px;">
+
+            <h2>
+                Jewelry Planner
+            </h2>
+
+            <p>
+                Get personalized jewellery suggestions
+                according to your outfit and budget.
+            </p>
+
+            <a
+                href="/jewelry"
+                class="card-link">
+
+                Create Jewelry Plan →
+
+            </a>
+
+        </div>
+
+
+        <div
+            class="card"
+            style="margin-top: 25px;">
+
+            <h2>
+                Recommendation History
+            </h2>
+
+            <p>
+                View your previously generated
+                AI recommendations.
+            </p>
+
+            <a
+                href="/history"
+                class="card-link">
+
+                View History →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

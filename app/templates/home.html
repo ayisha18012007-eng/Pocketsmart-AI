@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Interior Planner
+{% endblock %}
+
+
+{% block content %}
+
+<section class="planner-wrapper">
+
+    <div class="planner-card">
+
+        <h1>
+            🏠 Home Interior Planner
+        </h1>
+
+        <p>
+            Tell PocketSmart AI about your room
+            and receive a personalized interior plan.
+        </p>
+
+
+        <form id="homeForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Room Type
+                    </label>
+
+                    <select
+                        class="form-control"
+                        name="room_type"
+                        required>
+
+                        <option value="">
+                            Select room
+                        </option>
+
+                        <option>
+                            Bedroom
+                        </option>
+
+                        <option>
+                            Living Room
+                        </option>
+
+                        <option>
+                            Kitchen
+                        </option>
+
+                        <option>
+                            Study Room
+                        </option>
+
+                        <option>
+                            Dining Room
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Room Size
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="text"
+                        name="room_size"
+                        placeholder="Example: 10 x 12 ft"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Budget (₹)
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="number"
+                        name="budget"
+                        min="1"
+                        placeholder="50000"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Style
+                    </label>
+
+                    <select
+                        class="form-control"
+                        name="style"
+                        required>
+
+                        <option value="">
+                            Select style
+                        </option>
+
+                        <option>
+                            Modern
+                        </option>
+
+                        <option>
+                            Minimalist
+                        </option>
+
+                        <option>
+                            Traditional
+                        </option>
+
+                        <option>
+                            Luxury
+                        </option>
+
+                        <option>
+                            Bohemian
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Preferred Colours
+                </label>
+
+                <input
+                    class="form-control"
+                    type="text"
+                    name="colors"
+                    placeholder="Example: White, beige and brown">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Additional Requirements
+                </label>
+
+                <textarea
+                    class="form-control"
+                    name="requirements"
+                    placeholder="Example: Need a study table and more storage space"></textarea>
+
+            </div>
+
+
+            <button
+                id="generateButton"
+                class="btn btn-primary"
+                type="submit">
+
+                Generate AI Plan
+
+            </button>
+
+        </form>
+
+
+        <div
+            id="result"
+            class="result-box hidden">
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

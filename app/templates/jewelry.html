@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+
+{% block title %}
+Jewelry Planner
+{% endblock %}
+
+
+{% block content %}
+
+<section class="planner-wrapper">
+
+    <div class="planner-card">
+
+        <h1>
+            💎 Jewelry Planner
+        </h1>
+
+        <p>
+            Get personalized jewelry suggestions
+            according to your outfit, occasion,
+            preferred metal and budget.
+        </p>
+
+
+        <form
+            id="jewelryForm"
+            enctype="multipart/form-data">
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Occasion
+                    </label>
+
+                    <select
+                        class="form-control"
+                        name="occasion"
+                        required>
+
+                        <option value="">
+                            Select occasion
+                        </option>
+
+                        <option>
+                            Daily Wear
+                        </option>
+
+                        <option>
+                            College
+                        </option>
+
+                        <option>
+                            Wedding
+                        </option>
+
+                        <option>
+                            Party
+                        </option>
+
+                        <option>
+                            Festival
+                        </option>
+
+                        <option>
+                            Formal Event
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Outfit
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="text"
+                        name="outfit"
+                        placeholder="Example: Black saree"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Preferred Metal
+                    </label>
+
+                    <select
+                        class="form-control"
+                        name="metal"
+                        required>
+
+                        <option value="">
+                            Select metal
+                        </option>
+
+                        <option>
+                            Gold
+                        </option>
+
+                        <option>
+                            Silver
+                        </option>
+
+                        <option>
+                            Rose Gold
+                        </option>
+
+                        <option>
+                            Artificial
+                        </option>
+
+                        <option>
+                            Any
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Budget (₹)
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="number"
+                        name="budget"
+                        min="1"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Jewelry Style
+                </label>
+
+                <select
+                    class="form-control"
+                    name="style"
+                    required>
+
+                    <option value="">
+                        Select style
+                    </option>
+
+                    <option>
+                        Simple
+                    </option>
+
+                    <option>
+                        Traditional
+                    </option>
+
+                    <option>
+                        Modern
+                    </option>
+
+                    <option>
+                        Minimalist
+                    </option>
+
+                    <option>
+                        Statement
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Optional Outfit Image
+                </label>
+
+                <input
+                    class="form-control"
+                    type="file"
+                    name="image"
+                    accept=".jpg,.jpeg,.png,.webp">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Additional Requirements
+                </label>
+
+                <textarea
+                    class="form-control"
+                    name="requirements"
+                    placeholder="Example: I prefer lightweight jewellery"></textarea>
+
+            </div>
+
+
+            <button
+                id="generateButton"
+                class="btn btn-primary"
+                type="submit">
+
+                Generate AI Plan
+
+            </button>
+
+        </form>
+
+
+        <div
+            id="result"
+            class="result-box hidden">
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
